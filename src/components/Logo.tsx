@@ -41,16 +41,14 @@ export class Logo extends Node {
           ref={this.logoText}
           fill="#fafafa"
           fontFamily={"'Noto Sans TC', sans-serif"}
-          scaleY={6}
-          scaleX={6}
+          scale={6}
         />
         <Layout ref={this.logoIcon}>
           <Circle
             ref={this.background}
             width={240}
             height={240}
-            scaleY={18}
-            scaleX={18}
+            scale={2.4}
             fill="#774b9e"
           />
           ,
@@ -58,8 +56,7 @@ export class Logo extends Node {
             ref={this.space}
             width={48}
             height={48}
-            scaleX={0}
-            scaleY={0}
+            scale={0}
             fill="#000000"
           />
           ,
@@ -67,8 +64,7 @@ export class Logo extends Node {
             <Rect
               ref={makeRef(this.starsItems, 1)}
               fill="#FFF"
-              scaleY={1}
-              scaleX={1}
+              scale={1}
               rotation={45}
               width={14}
               height={14}
@@ -77,8 +73,7 @@ export class Logo extends Node {
             <Rect
               ref={makeRef(this.starsItems, 0)}
               fill="#FFF"
-              scaleY={1}
-              scaleX={1}
+              scale={1}
               rotation={45}
               width={14}
               height={14}
@@ -88,8 +83,7 @@ export class Logo extends Node {
             <Rect
               ref={makeRef(this.starsItems, 3)}
               fill="#FFF"
-              scaleY={1}
-              scaleX={1}
+              scale={1}
               rotation={45}
               width={14}
               height={14}
@@ -99,8 +93,7 @@ export class Logo extends Node {
             <Rect
               ref={makeRef(this.starsItems, 2)}
               fill="#FFF"
-              scaleY={1}
-              scaleX={1}
+              scale={1}
               rotation={45}
               width={14}
               height={14}
@@ -110,8 +103,7 @@ export class Logo extends Node {
             <Rect
               ref={makeRef(this.starsItems, 4)}
               fill="#FFF"
-              scaleY={1}
-              scaleX={1}
+              scale={1}
               rotation={45}
               width={14}
               height={14}
@@ -123,8 +115,7 @@ export class Logo extends Node {
             ref={this.whiteCircle}
             width={48}
             height={48}
-            scaleX={0}
-            scaleY={0}
+            scale={0}
             fill="#fafafa"
           />
           ,
@@ -135,23 +126,31 @@ export class Logo extends Node {
     );
   }
 
-  public *IntroAnimation(duration: number) {
+  public *IntroAnimation(_duration: number) {
+    this.background().scale(18);
     yield* all(
       this.background().scale(2.4, 1.2),
       this.space().scale(7.6, 1.2),
       this.whiteCircle().scale(4.2, 1.2)
     );
-
     yield* all(
-      this.logoIcon().position.x(-400, 1.2),
-      this.logoText().position.x(300, 1.2),
+      this.logoIcon().position.x(-400, 1),
+      this.logoText().position.x(300, 1),
       this.logoIcon().scale(0.75, 1.8),
-      showText(this.logoText)
+      showText(this.logoText),
+      this.blueA().position.y(0, 1.42),
+      this.redC().scale(1, 0.72)
     );
-    yield* all(this.blueA().position.y(0, 1.42), this.redC().scale(1, 0.72));
-    yield* all(this.blueA().scale(1.25, 0.5), this.stars().scale(1, 0.9));
+    function* showStars(stars: Reference<Layout>) {
+      yield* chain(waitFor(0.08), stars().scale(1, 0.8));
+    }
     yield* all(
-      this.space().scale(7.8, 1.2).to(8, easeInSine(1.2)).to(7.8, easeInSine(1.2)),
+      this.blueA().scale(1.25, 0.5),
+      showStars(this.stars),
+      this.space()
+        .scale(7.8, 1.2)
+        .to(8, easeInSine(1.2))
+        .to(7.8, easeInSine(1.2)),
       ...this.starsItems.map((star, index) => {
         const alter = index % 2 === 1 ? -1 : 1;
 
