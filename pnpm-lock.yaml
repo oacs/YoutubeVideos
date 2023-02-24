@@ -1,20 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@motion-canvas/2d': ^2.3.0
-  '@motion-canvas/core': ^2.3.0
-  '@motion-canvas/ui': ^2.3.0
-  '@motion-canvas/vite-plugin': ^2.2.0
+  '@motion-canvas/2d': ^2.6.0
+  '@motion-canvas/core': ^2.6.0
+  '@motion-canvas/ui': ^2.6.0
+  '@motion-canvas/vite-plugin': ^2.6.0
   typescript: ^4.9.5
-  vite: ^3.0.5
+  vite: ^3.2.5
 
 dependencies:
-  '@motion-canvas/2d': 2.3.0_vite@3.2.5
-  '@motion-canvas/core': 2.3.0_vite@3.2.5
+  '@motion-canvas/2d': 2.6.0_vite@3.2.5
+  '@motion-canvas/core': 2.6.0_vite@3.2.5
 
 devDependencies:
-  '@motion-canvas/ui': 2.3.0_vite@3.2.5
-  '@motion-canvas/vite-plugin': 2.2.0_vite@3.2.5
+  '@motion-canvas/ui': 2.6.0_vite@3.2.5
+  '@motion-canvas/vite-plugin': 2.6.0_vite@3.2.5
   typescript: 4.9.5
   vite: 3.2.5
 
@@ -36,18 +36,18 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@motion-canvas/2d/2.3.0_vite@3.2.5:
-    resolution: {integrity: sha512-/uXD9ARpSBu/fZ7BLtA2rgDY2rif6al1Z2xtnxF4Cr2MukGe3YGGgJMgU6bvb2I1EJHfFwAKEh39jtTlMF0QzQ==}
+  /@motion-canvas/2d/2.6.0_vite@3.2.5:
+    resolution: {integrity: sha512-8+cvVLT28Y/CZC/hB9tx3O+pB+d3oq00AnrR0cBBulhnRh0EBnFsKSdmyZhYBhF7s89SE9kiON5EwbkB0QdZng==}
     dependencies:
-      '@motion-canvas/core': 2.3.0_vite@3.2.5
-      code-fns: 0.8.2
+      '@motion-canvas/core': 2.6.0_vite@3.2.5
+      code-fns: 0.9.0
       mathjax-full: 3.2.2
     transitivePeerDependencies:
       - vite
     dev: false
 
-  /@motion-canvas/core/2.3.0_vite@3.2.5:
-    resolution: {integrity: sha512-a1BrM1UDkPE7SLftbHK9Q7N5jlB4hQ+5LriFj2dX+3IuO7ksWnw9xycqLAy28vTQojH0Me3U9TzToFLE470CgQ==}
+  /@motion-canvas/core/2.6.0_vite@3.2.5:
+    resolution: {integrity: sha512-8sE3j43UHKWdLuVps3zVpXvifKvmKd/fYkXhOmGsk0Fg2RjzpjzT2nWoY1zPfGehAf7sZAHcOHOamRhebLpgYQ==}
     peerDependencies:
       vite: ^3.0.5
     dependencies:
@@ -55,52 +55,40 @@ packages:
       chroma-js: 2.4.2
       vite: 3.2.5
 
-  /@motion-canvas/ui/2.3.0_vite@3.2.5:
-    resolution: {integrity: sha512-zkGAhhhO9fgEzDgw5JwS024l99E8bRliOpw6+TUIxekHbsXTCRwH1kRczZ1l++7Ey27wddOq1DwmDiB932FLhQ==}
+  /@motion-canvas/ui/2.6.0_vite@3.2.5:
+    resolution: {integrity: sha512-PXbdl5YKlR7ThuX5m1QaCVlHu4meDXR5daWU23Ytx9SBIfLIp/CVX/W2wvDPeS/iYaCiX1/ozlQhIOJjCrbJzA==}
     dependencies:
-      '@motion-canvas/core': 2.3.0_vite@3.2.5
+      '@motion-canvas/core': 2.6.0_vite@3.2.5
     transitivePeerDependencies:
       - vite
     dev: true
 
-  /@motion-canvas/vite-plugin/2.2.0_vite@3.2.5:
-    resolution: {integrity: sha512-D9K/pl5NmSiCcAqBiGVkd1v6uuBD94jOH1yV2Dxur5ziCf6AjIV0DACKsWH8JE7KEDWuWfeJlbCoFkH+p9JbJA==}
+  /@motion-canvas/vite-plugin/2.6.0_vite@3.2.5:
+    resolution: {integrity: sha512-eiOjUvOWTe+GACENAfOjgRyxpbdMC/r95prgp7NGFkoZAd9Qz69NrZEOXhx8UxYZXJGEiu2Inv0HUDulftbEcA==}
     peerDependencies:
       vite: 3.x
     dependencies:
+      follow-redirects: 1.15.2
       mime-types: 2.1.35
       vite: 3.2.5
+    transitivePeerDependencies:
+      - debug
     dev: true
 
   /@types/chroma-js/2.4.0:
     resolution: {integrity: sha512-JklMxityrwjBTjGY2anH8JaTx3yjRU3/sEHSblLH1ba5lqcSh1LnImXJZO5peJfXyqKYWjHTGy4s5Wz++hARrw==}
 
-  /@types/hast/2.3.4:
-    resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
-    dependencies:
-      '@types/unist': 2.0.6
-    dev: false
-
-  /@types/unist/2.0.6:
-    resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
-    dev: false
-
-  /@wooorm/starry-night/1.5.0:
-    resolution: {integrity: sha512-YEkNgM8IxKwzRQgTp1nyiraB5rc4LiLpnMTrJvX5+SVs7zgVqkTx6QAZgZFqrZrqq/UCWVYBzE9+zZfxpLPTYQ==}
-    dependencies:
-      '@types/hast': 2.3.4
-      import-meta-resolve: 2.2.1
-      vscode-oniguruma: 1.7.0
-      vscode-textmate: 7.0.4
+  /ansi-sequence-parser/1.1.0:
+    resolution: {integrity: sha512-lEm8mt52to2fT8GhciPCGeCXACSz2UwIN4X2e2LJSnZ5uAbn2/dsYdOmUXq0AtWS5cpAupysIneExOgH0Vd2TQ==}
     dev: false
 
   /chroma-js/2.4.2:
     resolution: {integrity: sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==}
 
-  /code-fns/0.8.2:
-    resolution: {integrity: sha512-3VVeq3cnWxWiWKFLsVo+XWsOXBSW2gAx2uv0ViETLNmNuygEPHlCeDAv/Zy7xXqPgXtgLZyvIJZmx+ojTgOIGA==}
+  /code-fns/0.9.0:
+    resolution: {integrity: sha512-UZl4Oujhmz5n3BLjTMdjjp3wz43V+d/qfEqQhEkvfNNmt5jwcBJbqMnilc08quyNIUioLvTsR08BzEpQpKTIHQ==}
     dependencies:
-      '@wooorm/starry-night': 1.5.0
+      shiki: 0.14.1
     dev: false
 
   /commander/9.2.0:
@@ -302,6 +290,16 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
+  /follow-redirects/1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: true
+
   /fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -318,14 +316,14 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
-  /import-meta-resolve/2.2.1:
-    resolution: {integrity: sha512-C6lLL7EJPY44kBvA80gq4uMsVFw5x3oSKfuMl1cuZ2RkI5+UJqQXgn+6hlUew0y4ig7Ypt4CObAAIzU53Nfpuw==}
-    dev: false
-
   /is-core-module/2.11.0:
     resolution: {integrity: sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==}
     dependencies:
       has: 1.0.3
+
+  /jsonc-parser/3.2.0:
+    resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
+    dev: false
 
   /mathjax-full/3.2.2:
     resolution: {integrity: sha512-+LfG9Fik+OuI8SLwsiR02IVdjcnRCy5MufYLi0C3TdMT56L/pjB0alMVGgoWJF8pN9Rc7FESycZB9BMNWIid5w==}
@@ -390,6 +388,15 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
+  /shiki/0.14.1:
+    resolution: {integrity: sha512-+Jz4nBkCBe0mEDqo1eKRcCdjRtrCjozmcbTUjbPTX7OOJfEbTZzlUWlZtGe3Gb5oV1/jnojhG//YZc3rs9zSEw==}
+    dependencies:
+      ansi-sequence-parser: 1.1.0
+      jsonc-parser: 3.2.0
+      vscode-oniguruma: 1.7.0
+      vscode-textmate: 8.0.0
+    dev: false
+
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -449,8 +456,8 @@ packages:
     resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
     dev: false
 
-  /vscode-textmate/7.0.4:
-    resolution: {integrity: sha512-9hJp0xL7HW1Q5OgGe03NACo7yiCTMEk3WU/rtKXUbncLtdg6rVVNJnHwD88UhbIYU2KoxY0Dih0x+kIsmUKn2A==}
+  /vscode-textmate/8.0.0:
+    resolution: {integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==}
     dev: false
 
   /wicked-good-xpath/1.3.0:
