@@ -126,6 +126,10 @@ export class Logo extends Node {
     );
   }
 
+  private *showStars() {
+    yield* chain(waitFor(0.08), this.stars().scale(1, 0.8));
+  }
+
   public *IntroAnimation(_duration: number) {
     this.background().scale(18);
     yield* all(
@@ -141,12 +145,9 @@ export class Logo extends Node {
       this.blueA().position.y(0, 1.42),
       this.redC().scale(1, 0.72)
     );
-    function* showStars(stars: Reference<Layout>) {
-      yield* chain(waitFor(0.08), stars().scale(1, 0.8));
-    }
     yield* all(
       this.blueA().scale(1.25, 0.5),
-      showStars(this.stars),
+      this.showStars(),
       this.space()
         .scale(7.8, 1.2)
         .to(8, easeInSine(1.2))

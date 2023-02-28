@@ -13,6 +13,7 @@
   "devDependencies": {
     "@motion-canvas/ui": "^2.6.0",
     "@motion-canvas/vite-plugin": "^2.6.0",
+    "eslint": "^8.35.0",
     "typescript": "^4.9.5",
     "vite": "^3.2.5"
   }

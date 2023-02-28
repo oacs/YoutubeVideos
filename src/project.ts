@@ -1,8 +1,8 @@
-import { makeProject } from '@motion-canvas/core/lib';
-import './global.css';
-import example from './scenes/intro?scene';
+import { makeProject } from "@motion-canvas/core/lib";
+import "./global.css";
+import Intro from "./scenes/intro?scene";
 
 export default makeProject({
-  scenes: [example],
-  background: '#141414',
+  scenes: [Intro],
+  background: "#141414",
 });
